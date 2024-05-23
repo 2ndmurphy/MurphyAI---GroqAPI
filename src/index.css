@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-loader {
+  width:22.5px;
+  height:15px;
+  /* padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px; */
+  background-color: white;
+  margin-right: 10px;
+  --c:linear-gradient(rgb(107 114 128) 0 0);
+  background: 
+    var(--c) 0%   100%,
+    var(--c) 50%  100%,
+    var(--c) 100% 100%;
+  background-size:4.5px 100%;
+  background-repeat: no-repeat;
+  animation:b2 1s infinite linear;
+}
+@keyframes b2 {
+    20% {background-size:4.5px 60% ,4.5px 100%,4.5px 100%}
+    40% {background-size:4.5px 80% ,4.5px 60% ,4.5px 100%}
+    60% {background-size:4.5px 100%,4.5px 80% ,4.5px 60% }
+    80% {background-size:4.5px 100%,4.5px 100%,4.5px 80% }
+}
+
+.drawer {
+  @layer background-color: white;
+}
