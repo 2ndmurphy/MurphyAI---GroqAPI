@@ -15,32 +15,33 @@ const FormInput = ({ onSubmit }) => {
   };
 
   return (
-    <>
-      <label className='relative py-9 ml-6 w-[700px] flex items-center gap-2'>
-        <form onSubmit={handleSubmit}>
-          <input 
-            type="text" 
-            placeholder="Ask Questions..."
-            className='grow py-2 px-2 w-[700px] border-b-2
-            border-slate-500 outline-none text-lg' 
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            disabled={loading}  // Disable input when loading
-          />
-          <button 
-            type='submit'
-            className={`absolute right-1 w-8 h-8 text-white`}
-            disabled={loading}
-          >
-            {loading ? <div className="custom-loader py-1 px-2 absolute right-1 text-gray-500 text-xl"></div> : 
-              <div className='text-gray-500 text-2xl font-bold bg-white'>
-                <i className='bx bx-send'></i>
-              </div>
-            }
-          </button>
-        </form>
-      </label>
-    </>
+    <div className="w-full md:w-[800px] lg:[750px] px-4 py-2 md:px-4 md:py-4">
+      <form onSubmit={handleSubmit} className="relative flex justify-center items-center gap-2 w-full">
+        <input 
+          type="text" 
+          placeholder="Ask Questions..."
+          className='grow py-2 px-2 w-full border-b-2 
+          border-slate-500 outline-none text-sm 
+          sm:text-md md:text-lg lg:text-xl ' 
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+          disabled={loading}  // Disable input when loading
+        />
+        <button 
+          type='submit'
+          className={`absolute right-1 w-8 h-8 text-white flex items-center justify-center`}
+          disabled={loading}
+        >
+          {loading ? (
+            <div className="custom-loader py-1 px-2 absolute right-1 text-gray-500 text-xl"></div>
+          ) : (
+            <div className='text-gray-500 text-2xl font-bold bg-white'> 
+              <i className='bx bx-send'></i>
+            </div>
+          )}
+        </button>
+      </form>
+    </div>
   );
 };
 
