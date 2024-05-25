@@ -14,7 +14,7 @@ const Drawer = () => {
   return (
     <div className="drawer lg:drawer-open bg-white">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col justify-end gap-8">
+      <div className="drawer-content flex flex-col justify-end gap-16">
         {/* Page content here */}
         <div>
         <label htmlFor="my-drawer-2" className="flex justify-between btn lg:hidden">
@@ -35,7 +35,7 @@ const Drawer = () => {
       {/* INI ADALAH SIDEBAR */}
       <div className="drawer-side">
         <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
-        <ul className="menu bg-base-200 w-56 lg:w-64 p-4">
+        <ul className="menu bg-base-200 w-56 h-full lg:w-64 p-4">
           <li>
             <a>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

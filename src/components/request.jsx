@@ -3,6 +3,7 @@ import { Light as SyntaxHighlight } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Element } from 'react-scroll';
 import Header from './utilities/header';
+import CTA from './CTA';
 
 const Request = ({ datas }) => {
   return (
@@ -19,7 +20,7 @@ const Request = ({ datas }) => {
               </SyntaxHighlight>
             </Element>
           </>
-        ) : null}
+        ) : <CTA/>}
       </div>
     </main>
   );

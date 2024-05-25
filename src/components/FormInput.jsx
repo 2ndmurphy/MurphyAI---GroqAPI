@@ -15,13 +15,17 @@ const FormInput = ({ onSubmit }) => {
   };
 
   return (
-    <div className="w-full md:w-[800px] lg:[750px] px-4 py-2 md:px-4 md:py-4">
-      <form onSubmit={handleSubmit} className="relative flex justify-center items-center gap-2 w-full">
+    <div className="flex sticky justify-center items-center 
+    w-full px-4 py-2 md:px-4 md:py-4 z-50">
+      <form 
+        className="relative flex justify-center items-center gap-2 w-full md:w-[800px]"
+        onSubmit={handleSubmit} 
+      >
         <input 
           type="text" 
           placeholder="Ask Questions..."
-          className='grow py-2 px-2 w-full border-b-2 
-          border-slate-500 outline-none text-sm 
+          className='grow py-2 px-2 w-full border rounded-lg 
+          md:border-b-2 border-slate-500 outline-none text-md 
           sm:text-md md:text-lg lg:text-xl ' 
           value={content}
           onChange={(e) => setContent(e.target.value)}
